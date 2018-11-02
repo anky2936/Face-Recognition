@@ -52,13 +52,14 @@ while(True):
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
         id,conf = rec.predict(gray[y:y+h,x:x+w])
         cv2.putText(img,str(id_map[id-1]) + '_' + str(conf),(x,y+h),fontFace,fontScale,fontColor)
-        if conf >= 60:
+        if conf >= 70 and conf<=100:
             print (conf)
+            print (str(id_map[id-1]))
             flag = 1
     cv2.imshow("face",img)
     if(cv2.waitKey(1)==ord('q')):
         break
-    elif time.time() - start_time >= 10:
+    elif time.time() - start_time >= 100:
         break
     elif flag:
         cam.release()

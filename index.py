@@ -1,3 +1,4 @@
+import FaceRecogTrain
 import FaceRecogTest
 print ('New User? ')
 

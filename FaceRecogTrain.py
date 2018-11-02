@@ -16,7 +16,7 @@ def getImageswithID(path):
         ID = int(os.path.split(imgpath)[-1].split('_')[0])
         faces.append(faceNp)
         IDs.append(ID)
-        cv2.imshow('training',faceNp)
+        #cv2.imshow('training',faceNp)
         cv2.waitKey(10)
     return IDs,faces
 
