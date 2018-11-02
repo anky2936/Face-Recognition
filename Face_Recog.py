@@ -1,13 +1,14 @@
 import numpy as np
 import cv2
 import pandas as pd
+import getpass
 
 facedetect = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 sampleNum = 0
 
 attempt = 0
 while(attempt!=3):
-    password = input("Enter the password : ")
+    password = getpass.getpass("Enter the password: ")
     if(password == "admin"):
         #df = pd.DataFrame(columns = ['UId','Name','Age','Phone No','Email Address'])
         #df.to_csv("data/DBNames.csv", index = False)
